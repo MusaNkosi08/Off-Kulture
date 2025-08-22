@@ -41,6 +41,7 @@ function SignIn() {
           className="inactive"
           onClick={() => navigate("/join")}
         >
+          
           Join now
         </button>
       </div>

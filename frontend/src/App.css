@@ -1,0 +1,191 @@
+/* Full screen container for web */
+.fullscreen-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, olive, white);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-top-left img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.centered-card {
+  background: rgba(230, 239, 172, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  width: 600px;
+  padding: 50px;
+  margin: 40px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.tabs button {
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 16px;
+}
+
+.tabs button.active {
+  color: #007151;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.tabs button.inactive {
+  color: #6b7280;
+}
+
+.tabs button.inactive:hover {
+  color: #047857;
+}
+
+.welcome-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.welcome-subtext {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.signin-form label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.signin-form input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.signin-form input:focus {
+  border-color: #047857;
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.3);
+}
+
+.signin-button {
+  width: 60%;
+  background-color: #065f46;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: background-color 0.2s;
+}
+
+.signin-button:hover {
+  background-color: #047857;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: #4b5563;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+/* Remove mobile responsiveness */
+@media (max-width: 1200px) {
+  .centered-card {
+    width: 550px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .centered-card {
+    width: 500px;
+    padding: 35px;
+  }
+  
+  .logo-top-left img {
+    height: 150px;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .centered-card {
+    width: 400px;
+    padding: 30px;
+    margin: 20px;
+  }
+  
+  .tabs {
+    gap: 20px;
+  }
+  
+  .tabs button {
+    font-size: 18px;
+  }
+  
+  .welcome-title {
+    font-size: 28px;
+  }
+}
+
